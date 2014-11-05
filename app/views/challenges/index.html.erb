@@ -1,0 +1,59 @@
+<% content_for :title do %>
+    Challenges
+<% end %>
+
+<h2>Challenges List</h2>
+
+<div style="background: #ddd">
+    <%= form_for(@challenge_filter, id: "filterForm", url: challenges_path, method: "get") do |f| %>
+
+        <button id="iconStatus" class="btn btn-primary" title="Search" role="button" style="float:left">
+            Search
+        </button>
+
+        <div class="filterBox">
+            <div style="float:left;">
+                <%= f.text_field :name, placeholder: "Name:" %>
+            </div>
+
+            <div style="float:left">
+                <%= f.select :challenge_type, ChallengeType.options, :prompt => "Type:" %>
+            </div>
+
+            <div style="clear: both"></div>
+        </div>
+
+    <% end %>
+</div>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Starts At</th>
+        <th>Ends At</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @challenges.each do |challenge| %>
+        <tr>
+            <td><%= link_to challenge.name, challenge %></td>
+            <td><%= challenge.description %></td>
+            <td><%= ChallengeType[challenge.challenge_type] %></td>
+            <td><%= challenge.starts_at %></td>
+            <td><%= challenge.ends_at %></td>
+            <td><%= link_to 'Edit', edit_challenge_path(challenge) %></td>
+            <td><%= link_to 'Destroy', challenge, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
+
+<div class="buttons">
+    <%= link_to "New Challenge", new_challenge_path, :class => 'btn btn-primary' %>
+</div>

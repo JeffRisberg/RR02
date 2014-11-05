@@ -1,0 +1,21 @@
+<table>
+    <tr>
+        <td><strong>Activity:</strong></td>
+        <td><%= @activity_track.activity.name %></td>
+    </tr>
+
+    <tr>
+        <td><strong>Amount:</strong></td>
+        <td><%= @activity_track.amount %></td>
+    </tr>
+
+    <tr>
+        <td><strong>Tracked On:</strong></td>
+        <td> <%= @activity_track.tracked_on.to_formatted_s(:db) %></td>
+    </tr>
+</table>
+
+<div class="buttons">
+    <%= link_to 'Edit', edit_activity_track_path(@activity_track), :class => 'btn btn-default' %>
+    <%= link_to 'Back', activity_tracks_path, :class => 'btn btn-default' %>
+</div>

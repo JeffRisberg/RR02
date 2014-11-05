@@ -1,0 +1,111 @@
+// Place all the styles related to the layouts here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: image-url('background.png') repeat scroll 0 0 transparent;
+  border-top: 10px solid #000000;
+}
+
+.content {
+  background: #eee;
+}
+
+/* menu */
+ul#menu {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin: 0 0 5px;
+  padding: 0;
+  text-align: right;
+}
+
+ul#menu li {
+  display: inline;
+  list-style: none;
+  padding-left: 15px;
+}
+
+ul#menu li a {
+  background: none;
+  color: #999;
+  text-decoration: none;
+}
+
+ul#menu li a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.filterBox input {
+  margin: 3px 0px 0px 5px;
+  width: 190px;
+}
+
+.filterBox select {
+  margin: 3px 0px 0px 5px;
+  width: 190px;
+  height: 28px;
+}
+
+.filterBox input[type='text'] {
+  margin-top: 3px;
+  height: 28px;
+}
+
+#filterForm {
+  margin-top: 5px;
+  background: #eee;
+  padding: 3px;
+  font-size: 12x;
+}
+
+/* content */
+article {
+  float: left;
+  width: 70%;
+}
+
+aside {
+  float: right;
+  width: 25%;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside ul li {
+  background: image-url("bullet.png") no-repeat 0 50%;
+  padding: 2px 0 2px 20px;
+}
+
+.label {
+  font-weight: 700;
+}
+
+header {
+  background: black;
+}
+
+header .content-wrapper {
+  padding-top: 20px;
+}
+
+footer {
+  background: #333333;
+  color: #ff4316;
+  clear: both;
+  font-size: 14px;
+  margin: 10px auto 0 auto;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ff4316;
+}
+
+footer .content-wrapper {
+  height: 10px;
+}

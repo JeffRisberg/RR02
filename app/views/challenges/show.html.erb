@@ -1,0 +1,63 @@
+<table>
+    <tr>
+        <td><strong>Name:</strong></td>
+        <td><%= @challenge.name %></td>
+    </tr>
+
+    <tr>
+        <td><strong>Description:</strong></td>
+        <td><%= @challenge.description %></td>
+    </tr>
+
+    <tr>
+        <td><strong>Type:</strong></td>
+        <td><%= ChallengeType[@challenge.challenge_type] %></td>
+    </tr>
+
+    <tr>
+        <td><strong>Starts At:</strong></td>
+        <td><%= @challenge.starts_at %></td>
+    </tr>
+
+    <tr>
+        <td><strong>Ends At:</strong></td>
+        <td><%= @challenge.ends_at %></td>
+    </tr>
+</table>
+
+<div>
+    <table class="table">
+        <tr>
+            <th>Activity Name&nbsp;</th>
+            <th style="text-align: right">Threshold Value&nbsp;</th>
+            <th>Threshold Kind&nbsp;</th>
+            <th style="text-align: right">Number Thresholds&nbsp;</th>
+            <th style="text-align: right">Points Per Threshold&nbsp;</th>
+        </tr>
+        <% @challenge.challenge_activities.each do |challenge_activity| %>
+            <tr>
+                <td>
+                    <%= challenge_activity.activity.name %>
+                </td>
+                <td style="text-align: right">
+                    <%= challenge_activity.threshold_value %>
+                </td>
+                <td>
+                    <%= challenge_activity.threshold_kind %>
+                </td>
+                <td style="text-align: right">
+                    <%= challenge_activity.number_thresholds %>
+                </td>
+                <td style="text-align: right">
+                    <%= challenge_activity.points_per_threshold %>
+                </td>
+            </tr>
+        <% end %>
+    </table>
+</div>
+
+<div class="buttons">
+    <%= link_to 'Edit Basic Info', edit_challenge_path(@challenge), :class => 'btn btn-default' %>
+    <%= link_to 'Edit Activities', list_challenge_activities_path(@challenge), :class => 'btn btn-default' %>
+    <%= link_to 'Back', challenges_path, :class => 'btn btn-default' %>
+</div>

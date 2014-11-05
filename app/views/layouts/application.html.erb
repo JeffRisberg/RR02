@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "RR02" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "RR02 application" %>">
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header class="navbar navbar-fixed-top">
+    <nav class="navbar-inner">
+        <div class="container">
+            <%= render '/header' %>
+        </div>
+    </nav>
+</header>
+
+<div style="width: 1024px; margin: 0 auto;">
+
+    <%= render 'layouts/messages' %>
+
+    <div class="content" style="padding-left: 10px; padding-top: 5px; padding-bottom: 1px;">
+        <%= yield %>
+    </div>
+
+    <footer>
+        <%= render "/footer" %>
+    </footer>
+</div>
+
+</body>
+</html>

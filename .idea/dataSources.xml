@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3573204802">
+    <data-source source="LOCAL" name="Rails RR014: test" uuid="6443c935-6b8d-426f-96e8-a6b43a4f04d9">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:RR02_test</jdbc-url>
+      <user-name>admin</user-name>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.IntelliJIdea12/config/jdbc-drivers/postgresql-driver-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.IntelliJIdea12/config/jdbc-drivers/postgresql-9.2-1002.jdbc4.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails RR014: development" uuid="92ab0b25-2137-41ff-bfcc-4ee538508b4b">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:RR02_development</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9c</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.IntelliJIdea12/config/jdbc-drivers/postgresql-driver-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.IntelliJIdea12/config/jdbc-drivers/postgresql-9.2-1002.jdbc4.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails RR014: production" uuid="931bfa5d-bd5a-4ee3-b14a-9f543c561f32">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:RR02_production</jdbc-url>
+      <user-name>admin</user-name>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.IntelliJIdea12/config/jdbc-drivers/postgresql-driver-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.IntelliJIdea12/config/jdbc-drivers/postgresql-9.2-1002.jdbc4.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails RR02: development" uuid="ab0c0fc3-64ba-4af4-be56-f68cd1a62f9f">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:RR02_development</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9c</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails RR02: test" uuid="a19d2c99-dca1-49ba-aa41-3d3fd171c0b6">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:RR02_test</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9c</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails RR02: production" uuid="78bacd51-0702-4384-ba56-7922670046df">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:RR02_production</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9c</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails RR02: development" uuid="ab257db2-65a3-4e29-ace2-7576a8bb4e81">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:RR02_development</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9c</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails RR02: test" uuid="a2ea1878-9a6e-48cd-891d-300b4361ef3e">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:RR02_test</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9c</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails RR02: production" uuid="749edc77-b247-4f6f-b783-d230d8c3528f">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:RR02_production</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9c</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

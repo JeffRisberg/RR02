@@ -1,0 +1,36 @@
+<table>
+    <tr>
+        <td><strong>Activity:</strong></td>
+        <td><%= @challenge_activity.activity.name %></td>
+    </tr>
+
+    <tr>
+        <td><strong>Seq Num:</strong></td>
+        <td><%= @challenge_activity.seq_num %></td>
+    </tr>
+
+    <tr>
+        <td><strong>Threshold value:</strong></td>
+        <td><%= @challenge_activity.threshold_value %></td>
+    </tr>
+
+    <tr>
+        <td><strong>Threshold kind:</strong></td>
+        <td><%= ThresholdKind[@challenge_activity.threshold_kind] %></td>
+    </tr>
+
+    <tr>
+        <td><strong>Number thresholds:</strong></td>
+        <td><%= @challenge_activity.number_thresholds %></td>
+    </tr>
+
+    <tr>
+        <td><strong>Points per threshold:</strong></td>
+        <td><%= @challenge_activity.points_per_threshold %></td>
+    </tr>
+</table>
+
+<div class="buttons">
+    <%= link_to 'Edit', edit_challenge_activity_path(@challenge_activity), :class => "btn btn-default" %>
+    <%= link_to 'Back', list_challenge_activities_path(@challenge), :class => 'btn btn-default' %>
+</div>

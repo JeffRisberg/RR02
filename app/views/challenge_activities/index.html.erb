@@ -1,0 +1,40 @@
+<% content_for :title do %>
+    Challenge Activities
+<% end %>
+
+<h3>Challenge Activities for <%= @challenge.name %></h3>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Activity&nbsp;</th>
+        <th style="text-align: right">Seq #</th>
+        <th style="text-align: right">Threshold Value&nbsp;</th>
+        <th>Threshold Kind&nbsp;</th>
+        <th style="text-align: right">Number Thresholds&nbsp;</th>
+        <th style="text-align: right">Points Per Threshold&nbsp;</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @challenge_activities.each do |challenge_activity| %>
+        <tr>
+            <td><%= link_to challenge_activity.activity.name, challenge_activity %></td>
+            <td style="text-align: right"><%= challenge_activity.seq_num %></td>
+            <td style="text-align: right"><%= challenge_activity.threshold_value %></td>
+            <td><%= ThresholdKind[challenge_activity.threshold_kind] %></td>
+            <td style="text-align: right"><%= challenge_activity.number_thresholds %></td>
+            <td style="text-align: right"><%= challenge_activity.points_per_threshold %></td>
+            <td><%= link_to 'Edit', edit_challenge_activity_path(challenge_activity) %></td>
+            <td><%= link_to 'Destroy', challenge_activity, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
+
+<div class="buttons">
+    <%= link_to "New Challenge Activity", add_challenge_activity_path(@challenge), :class => 'btn btn-primary' %>
+    <%= link_to 'Back', challenge_path(@challenge), :class => 'btn btn-default' %>
+</div>

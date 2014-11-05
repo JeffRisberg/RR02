@@ -1,0 +1,47 @@
+<%= form_for(@challenge) do |f| %>
+    <% if @challenge.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(@challenge.errors.count, "error") %> prohibited this challenge from being saved:</h2>
+
+            <ul>
+                <% @challenge.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <table>
+        <tr>
+            <td class="field"><%= f.label :name %></td>
+            <td><%= f.text_field :name %></td>
+        </tr>
+        <tr>
+            <td class="field"><%= f.label :description %></td>
+            <td><%= f.text_area :description, :cols => 60, :rows => 3, :style => "width: 700px; height: 40px" %></td>
+        </tr>
+        <tr>
+            <td class="field"><%= f.label :challenge_type, "Challenge Type" %></td>
+            <td><%= f.select :challenge_type, ChallengeType.options %></td>
+        </tr>
+        <tr>
+            <td class="field"><%= f.label :starts_at, "Starts At" %></td>
+            <td><%= f.text_field :starts_at %></td>
+        </tr>
+        <tr>
+            <td class="field"><%= f.label :ends_at, "Ends At" %></td>
+            <td><%= f.text_field :ends_at %></td>
+        </tr>
+        <tr>
+            <td colspan="999" class="actions"><%= f.submit :class => 'btn btn-primary' %></td>
+        </tr>
+    </table>
+<% end %>
+
+<script type="text/javascript">
+    $().ready(function () {
+
+        $('#challenge_starts_at').datepicker({format: 'yyyy-mm-dd'});
+        $('#challenge_ends_at').datepicker({format: 'yyyy-mm-dd'});
+    });
+</script>

@@ -1,0 +1,35 @@
+<% content_for :title do %>
+    Activity Tracks
+<% end %>
+
+<h2>Activity Tracks List</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Activity</th>
+        <th style="text-align: right">Amount</th>
+        <th>Tracked On</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @activity_tracks.each do |activity_track| %>
+        <tr>
+            <td><%= activity_track.activity.name %></td>
+            <td style="text-align: right"><%= activity_track.amount %></td>
+            <td><%= activity_track.tracked_on.to_formatted_s(:db) %></td>
+            <td><%= link_to 'Show', activity_track %></td>
+            <td><%= link_to 'Edit', edit_activity_track_path(activity_track) %></td>
+            <td><%= link_to 'Destroy', activity_track, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
+
+<div class="buttons">
+    <%= link_to 'New Activity Track', new_activity_track_path, :class => "btn btn-primary" %>
+</div>

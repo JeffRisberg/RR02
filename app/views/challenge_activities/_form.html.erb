@@ -1,0 +1,46 @@
+<%= form_for(@challenge_activity) do |f| %>
+    <% if @challenge_activity.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(@challenge_activity.errors.count, "error") %> prohibited this challenge_activity from
+                being saved:</h2>
+
+            <ul>
+                <% @challenge_activity.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <%= f.hidden_field :challenge_id %>
+
+    <table>
+        <tr>
+            <td class="field"><%= f.label :activity_id %></td>
+            <td><%= f.collection_select :activity_id, @activities, :id, :name, prompt: "Select Activity" %></td>
+        </tr>
+        <tr>
+            <td class="field"><%= f.label :seq_num, "Sequence Number" %></td>
+            <td><%= f.text_field :seq_num %></td>
+        </tr>
+        <tr>
+            <td class="field"><%= f.label :threshold_value, "Threshold Value" %></td>
+            <td><%= f.text_field :threshold_value %></td>
+        </tr>
+        <tr>
+            <td class="field"><%= f.label :threshold_kind, "Threshold Kind" %></td>
+            <td><%= f.select :threshold_kind, ThresholdKind.options %></td>
+        </tr>
+        <tr>
+            <td class="field"><%= f.label :number_thresholds, "Number Thresholds" %></td>
+            <td><%= f.text_field :number_thresholds %></td>
+        </tr>
+        <tr>
+            <td class="field"><%= f.label :points_per_threshold, "Points Per Threshold" %></td>
+            <td><%= f.text_field :points_per_threshold %></td>
+        </tr>
+        <tr>
+            <td colspan="999" class="actions"><%= f.submit :class => 'btn btn-primary' %></td>
+        </tr>
+    </table>
+<% end %>

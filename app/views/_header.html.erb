@@ -1,0 +1,16 @@
+<div class="col-md-3" style="background: black; height: 50px">
+    <a style="padding:0; " href="/">
+        <%= image_tag 'logo.png', :style => "border: 0px solid white" %>
+    </a>
+</div>
+<div class="col-md-8" style="margin-top: 10px">
+    <nav>
+        <ul id="menu">
+            <li><%= link_to 'Home', home_path %></a></li>
+            <li><%= link_to 'About', home_about_path %></a></li>
+            <li><%= link_to 'Track', activity_tracks_path %></li>
+            <li><%= link_to 'Challenges', challenges_path %></li>
+            <li><%= link_to 'Activities', activities_path %></li>
+        </ul>
+    </nav>
+</div>
